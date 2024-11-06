@@ -1,0 +1,49 @@
+{
+  "transactions": [
+    {
+      "ID": 1,
+      "BudgetID": 1001,
+      "Category": 2,
+      "amount": 150.75,
+      "type": "Income",
+      "Memo": "Freelance project",
+      "date": "2024-10-15T10:15:00.000+00:00"
+    },
+    {
+      "ID": 2,
+      "BudgetID": 1002,
+      "Category": 3,
+      "amount": 50.00,
+      "type": "Expense",
+      "Memo": "Groceries",
+      "date": "2024-10-16T14:30:00.000+00:00"
+    },
+    {
+      "ID": 3,
+      "BudgetID": 1003,
+      "Category": 1,
+      "amount": 25.00,
+      "type": "Expense",
+      "Memo": "Test",
+      "date": "2024-10-22T23:29:36.272+00:00"
+    },
+    {
+      "ID": 4,
+      "BudgetID": 1004,
+      "Category": 2,
+      "amount": 200.00,
+      "type": "Income",
+      "Memo": "Salary",
+      "date": "2024-10-18T09:00:00.000+00:00"
+    },
+    {
+      "ID": 5,
+      "BudgetID": 1005,
+      "Category": 4,
+      "amount": 75.50,
+      "type": "Expense",
+      "Memo": "Restaurant",
+      "date": "2024-10-19T20:00:00.000+00:00"
+    }
+  ]
+}
