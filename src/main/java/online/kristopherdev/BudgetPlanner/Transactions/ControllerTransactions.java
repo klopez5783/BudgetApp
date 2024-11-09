@@ -11,20 +11,20 @@ import java.util.Optional;
 @RequestMapping("api/transactions")
 public class ControllerTransactions {
 
-    private final TransactionsRepo repository;
+    private final TransactionRepo repository;
 
-    public ControllerTransactions(TransactionsRepo repo){
+    public ControllerTransactions(TransactionRepo repo){
         this.repository = repo;
     }
 
     @GetMapping("")
     List<Transaction> getTransactions(){
-        return repository.getTransactionsList();
+        return repository.findAll();
     }
 
     @GetMapping("/{ID}")
     Transaction findById(@PathVariable Integer ID){
-        Optional<Transaction> transaction = repository.findByID(ID);
+        Optional<Transaction> transaction = repository.findById(ID);
         if(transaction.isEmpty()){
             throw new TransactionNotFoundException();
         }
@@ -35,21 +35,21 @@ public class ControllerTransactions {
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("")
     void create(@Valid @RequestBody Transaction transaction){
-        repository.create(transaction);
+        repository.save(transaction);
     }
 
     //put
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @PutMapping("{ID}")
     void update(@Valid @RequestBody Transaction t , @PathVariable Integer ID ){
-        repository.update(t,ID);
+        repository.save(t);
     }
 
     //delete
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("{ID}")
     void delete(@PathVariable Integer ID){
-        repository.remove(ID);
+        repository.delete(repository.findById(ID).get());
     }
 
 

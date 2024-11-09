@@ -14,10 +14,10 @@ import java.io.InputStream;
 @Component
 public class TranactionsLoader implements CommandLineRunner {
     private static final Logger log = LoggerFactory.getLogger(TranactionsLoader.class);
-    private final TransactionsRepo repsoitory;
+    private final TransactionRepo repsoitory;
     private final ObjectMapper objectMapper;
 
-    public TranactionsLoader(TransactionsRepo repsoitory, ObjectMapper objectMapper) {
+    public TranactionsLoader(TransactionRepo repsoitory, ObjectMapper objectMapper) {
         this.repsoitory = repsoitory;
         this.objectMapper = objectMapper;
     }
@@ -26,12 +26,12 @@ public class TranactionsLoader implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        if(repsoitory.getTransactionsList().isEmpty()){
+        if(repsoitory.findAll().isEmpty()){
             try{
                 InputStream inputStream = TypeReference.class.getResourceAsStream("/data/transactions.json");
                 Transactions transactions = objectMapper.readValue(inputStream, Transactions.class);
                 log.info("Reading {} transactions", transactions.transactions().size());
-                repsoitory.insertTransactions(transactions.transactions());
+                repsoitory.saveAll(transactions.transactions());
             }catch (IOException e){
                 log.error("Error loading transactions: " + e.getMessage());
             }

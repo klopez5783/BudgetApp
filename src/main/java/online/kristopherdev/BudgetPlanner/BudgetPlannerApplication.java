@@ -4,8 +4,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jdbc.repository.config.EnableJdbcRepositories;
 
 @SpringBootApplication
+@EnableJdbcRepositories
 public class BudgetPlannerApplication {
 
 	private static final Logger Log = LoggerFactory.getLogger(BudgetPlannerApplication.class);
@@ -17,7 +19,7 @@ public class BudgetPlannerApplication {
 	}
 
 //	@Bean
-//	CommandLineRunner transaction(TransactionsRepo repository){
+//	CommandLineRunner transaction(JDBC_Client_Repository repository){
 //		return args -> {
 //			Transaction transaction = new Transaction(
 //					5,

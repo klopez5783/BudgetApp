@@ -1,12 +1,12 @@
-create table if not exists Budget(
-    ID int not null,
-    budget varchar(250) not null,
-    savings int not null,
-    needs int not null,
-    wants int not null,
-    PRIMARY KEY(ID)
-);
-
+--create table if not exists Budget(
+--    ID int not null,
+--    budget varchar(250) not null,
+--    savings int not null,
+--    needs int not null,
+--    wants int not null,
+--    PRIMARY KEY(ID)
+--);
+--
 CREATE TABLE IF NOT EXISTS Transaction (
     ID INT NOT NULL,
     BudgetID INT NOT NULL,
@@ -15,5 +15,7 @@ CREATE TABLE IF NOT EXISTS Transaction (
     type VARCHAR(50),
     Memo VARCHAR(255),
     date DATE NOT NULL,
+    account_id INT NOT NULL,  -- Add this line
+    version INT,
     PRIMARY KEY (ID)
 );
