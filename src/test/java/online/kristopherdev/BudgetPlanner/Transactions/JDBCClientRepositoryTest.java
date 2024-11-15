@@ -108,13 +108,14 @@ class JDBCClientRepositoryTest {
 
     @Test
     void update() {
+        Date currentDate = new Date();
         Transaction updated = new Transaction(
                 1, // ID
                 2, // AccountID
                 3, // CategoryID
                 new BigDecimal("5.00"), // Amount
                 Transaction.Type.Income, // Type
-                new Date(), // Date
+                currentDate, // Date
                 "Updated" // Memo
         );
 
