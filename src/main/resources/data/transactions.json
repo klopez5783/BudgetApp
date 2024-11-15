@@ -1,49 +1,49 @@
 {
   "transactions": [
-    {
-      "ID": 1,
-      "BudgetID": 1001,
-      "Category": 2,
-      "amount": 150.75,
-      "type": "Income",
-      "Memo": "Freelance project",
-      "date": "2024-10-15T10:15:00.000+00:00"
-    },
-    {
-      "ID": 2,
-      "BudgetID": 1002,
-      "Category": 3,
-      "amount": 50.00,
-      "type": "Expense",
-      "Memo": "Groceries",
-      "date": "2024-10-16T14:30:00.000+00:00"
-    },
-    {
-      "ID": 3,
-      "BudgetID": 1003,
-      "Category": 1,
-      "amount": 25.00,
-      "type": "Expense",
-      "Memo": "Test",
-      "date": "2024-10-22T23:29:36.272+00:00"
-    },
-    {
-      "ID": 4,
-      "BudgetID": 1004,
-      "Category": 2,
-      "amount": 200.00,
-      "type": "Income",
-      "Memo": "Salary",
-      "date": "2024-10-18T09:00:00.000+00:00"
-    },
-    {
-      "ID": 5,
-      "BudgetID": 1005,
-      "Category": 4,
-      "amount": 75.50,
-      "type": "Expense",
-      "Memo": "Restaurant",
-      "date": "2024-10-19T20:00:00.000+00:00"
-    }
-  ]
+      {
+        "ID": 1,
+        "AccountID": 101,
+        "CategoryID": 1,
+        "Amount": 50.00,
+        "type": "Expense",
+        "date": "2024-11-01T10:00:00",
+        "Memo": "Groceries"
+      },
+      {
+        "ID": 2,
+        "AccountID": 102,
+        "CategoryID": 2,
+        "Amount": 800.00,
+        "type": "Expense",
+        "date": "2024-11-05T08:30:00",
+        "Memo": "Monthly rent"
+      },
+      {
+        "ID": 3,
+        "AccountID": 101,
+        "CategoryID": 3,
+        "Amount": 25.00,
+        "type": "Expense",
+        "date": "2024-11-03T18:20:00",
+        "Memo": "Movie night"
+      },
+      {
+        "ID": 4,
+        "AccountID": 103,
+        "CategoryID": 4,
+        "Amount": 150.00,
+        "type": "Income",
+        "date": "2024-11-02T14:45:00",
+        "Memo": "Freelance project"
+      },
+      {
+        "ID": 5,
+        "AccountID": 102,
+        "CategoryID": 5,
+        "Amount": 45.00,
+        "type": "Expense",
+        "date": "2024-11-07T13:15:00",
+        "Memo": "Restaurant"
+      }
+    ]
 }
